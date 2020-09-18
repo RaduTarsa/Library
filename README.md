@@ -12,7 +12,7 @@ Pe partea de server, folosim Laravel 8, un framework PHP, cu care gestionam requ
 
 ## Tehnologii folosite
 Pe partea de front-end folosim bootstrap pentru stilizarea markup-ului, interfata AdminLTE pentru structurarea propriu-zisa a comenzilor adminilor.
-	Pe partea de back-end folosim Laravel 8, framework in PHP care are la baza MVC, ceea ce ne faciliteaza separarea view-urilor de controllere si modelele bazei de date, iar ca baza de date folosim MySQL.
+Pe partea de back-end folosim Laravel 8, framework in PHP care are la baza MVC, ceea ce ne faciliteaza separarea view-urilor de controllere si modelele bazei de date, iar ca baza de date folosim MySQL.
 
 ##	Arhitectura aplicatiei
 Aplicatia este impartita in modele, view-uri si controllere pentru a facilita scrierea de cod, acesta fiind dinamic transpus. Avem rutele prestabilite care ne duc catre view-urile dorite cu ajutorul controllerelor aferente. Pe langa returnarea de view-uri, aceste controllere gestioneaza, cu ajutorul modelelor, datele din baza de date.
@@ -22,12 +22,12 @@ Am creat rolurile de “client” si “admin” cu id-urile 1, respectiv 2, cu 
 
 ##	Flow-ul aplicatiei
 Vom fi intampinati de o pagina de login/register unde ne putem conecta.
-	Vom merge catre pagina principala unde vom avea lista de carti pe care le putem descarca.
-	In cazul in care suntem admini pe aceasta aplicatie, vom fi intampinati de interfata AdminLTE care faciliteaza administrarea aplicatiei
-	Putem adauga carti noi pe pagina Add Book, unde vom pune un titlu, autor, editor, un fisier PDF cu cartea respectiva si selectam o categorie.
-	Daca nu avem deja adaugate categorii, putem sa le adaugam cu Add Category.
-	Dupa ce adaugam o categorie, ulterior o carte, putem sa o editam schimbandu-i oricare dintre acesti parametri, respectiv sa o stergem.
-	Putem face la fel cu categoriile de carti, acestea fiind in stransa legatura cu cartile (daca stergem o categorie, stergem toate cartile din acea categorie; daca modificam numele acesteia, cartile vor apartine de noua categorie; daca modificam o categorie si ii dam un nume asemanator cu alta categorie, toate cartile vor trece la vechea categorie, adica aceeasi cu cea noua, iar cea noua nu va fi adaugata).
+Vom merge catre pagina principala unde vom avea lista de carti pe care le putem descarca.
+In cazul in care suntem admini pe aceasta aplicatie, vom fi intampinati de interfata AdminLTE care faciliteaza administrarea aplicatiei
+Putem adauga carti noi pe pagina Add Book, unde vom pune un titlu, autor, editor, un fisier PDF cu cartea respectiva si selectam o categorie.
+Daca nu avem deja adaugate categorii, putem sa le adaugam cu Add Category.
+Dupa ce adaugam o categorie, ulterior o carte, putem sa o editam schimbandu-i oricare dintre acesti parametri, respectiv sa o stergem.
+Putem face la fel cu categoriile de carti, acestea fiind in stransa legatura cu cartile (daca stergem o categorie, stergem toate cartile din acea categorie; daca modificam numele acesteia, cartile vor apartine de noua categorie; daca modificam o categorie si ii dam un nume asemanator cu alta categorie, toate cartile vor trece la vechea categorie, adica aceeasi cu cea noua, iar cea noua nu va fi adaugata).
 
 ##	Imbunatatiri care pot fi aduse proiectului
 Proiectul poate dispune de mai multe functii: adaugare de administratori sau revocarea drepturilor acestora, un profil al fiecarui user, functia de book-unbook la carti specificand cine a imprumutat-o, un timeline cu 5 sau 10 notificari in care se pot pune ultimele 5-10 actiuni realizate e.g. “Ion, Liviu Rebreanu, a fost adaugata la ora 10:34 de catre User15”, etc.
@@ -41,7 +41,8 @@ Utilizarea Laravel 8 m-a pus in dificultate la inceput, nestiind ca a fost actua
 ##	Pentru rularea proiectului
 Am folosit Laravel 8, deci pot aparea conflicte daca este utilizata versiunea 7.
 Pentru rulare ne vom crea o baza de date cu userul root, parola “blank” si numele acesteia “library”.
-	Rulam comanda “php artisan migrate”, iar apoi “php artisan db:seed --class=DefSeeder”, pornim serverul si intram pe aplicatia web realizata.
+Rulam comanda “php artisan migrate”, iar apoi “php artisan db:seed --class=DefSeeder”, pornim serverul si intram pe aplicatia web realizata.
+Se vor adauga 2 fisiere PDF cu numele 1.pdf si 2.pdf in "storage/app/public_html/uploads" pentru a simula cele 2 fisiere PDF de la cartile cu id-urile 1 si 2 adaugate de seeder.
 In aplicatie, ne vom conecta cu testuser@gmail.com sau testadmin@gmail.com cu parola password.
 
 ##	Referinte
